@@ -8,8 +8,9 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors:{
-        origin:process.env.URL,
-        methods:['GET','POST']
+        origin:`https://melapp-pied.vercel.app`,
+        methods:['GET','POST'],
+        credentials: true,
     }
 })
 
