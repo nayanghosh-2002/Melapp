@@ -98,7 +98,7 @@ const Post = ({ post }) => {
 
     const bookmarkHandler = async () => {
         try {
-            const res = await axios.get(`https://instaclone-g9h5.onrender.com/api/v1/post/${post?._id}/bookmark`, {withCredentials:true});
+            const res = await axios.get(`https://melapp-backend.onrender.com/api/v1/post/${post?._id}/bookmark`, {withCredentials:true});
             if(res.data.success){
                 toast.success(res.data.message);
             }
