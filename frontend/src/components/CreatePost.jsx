@@ -10,7 +10,6 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPosts } from '@/redux/postSlice';
 
-const { userProfile, user } = useSelector(store => store.auth);
 
 const CreatePost = ({ open, setOpen }) => {
   const imageRef = useRef();
@@ -66,7 +65,7 @@ const CreatePost = ({ open, setOpen }) => {
           </Avatar>
           <div>
             <h1 className='font-semibold text-xs'>{user?.username}</h1>
-            <span className='text-gray-600 text-xs'>{userProfile?.bio || 'bio here...'}</span>
+            <span className='text-gray-600 text-xs'>{user?.bio || 'bio here...'}</span>
           </div>
         </div>
         <Textarea value={caption} onChange={(e) => setCaption(e.target.value)} className="focus-visible:ring-transparent border-none" placeholder="Write a caption..." />
