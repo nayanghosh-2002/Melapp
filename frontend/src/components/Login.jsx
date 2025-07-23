@@ -92,7 +92,7 @@ const Login = () => {
                     )
                 }
 
-                <span className='text-center'>Dosent have an account? <Link to="/signup" className='text-blue-600'>Signup</Link></span>
+                <span className='text-center'>Don't have an account? <Link to="/signup" className='text-blue-600'>Signup</Link></span>
             </form>
         </div>
     )
